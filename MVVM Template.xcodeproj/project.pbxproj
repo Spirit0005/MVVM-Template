@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		685636B625D1445400025C19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685636B525D1445400025C19 /* AppDelegate.swift */; };
 		685636B825D1445400025C19 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685636B725D1445400025C19 /* SceneDelegate.swift */; };
-		685636BA25D1445400025C19 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685636B925D1445400025C19 /* ViewController.swift */; };
+		685636BA25D1445400025C19 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685636B925D1445400025C19 /* BaseViewController.swift */; };
 		685636BD25D1445500025C19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 685636BB25D1445500025C19 /* Main.storyboard */; };
 		685636BF25D1445800025C19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 685636BE25D1445800025C19 /* Assets.xcassets */; };
 		685636C225D1445800025C19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 685636C025D1445800025C19 /* LaunchScreen.storyboard */; };
+		685636FE25D14D4F00025C19 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685636FD25D14D4F00025C19 /* BaseViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		685636B225D1445400025C19 /* MVVM Template.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVVM Template.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		685636B525D1445400025C19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		685636B725D1445400025C19 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		685636B925D1445400025C19 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		685636B925D1445400025C19 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		685636BC25D1445500025C19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		685636BE25D1445800025C19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		685636C125D1445800025C19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		685636C325D1445800025C19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		685636FD25D14D4F00025C19 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,144 @@
 		685636B425D1445400025C19 /* MVVM Template */ = {
 			isa = PBXGroup;
 			children = (
-				685636B525D1445400025C19 /* AppDelegate.swift */,
-				685636B725D1445400025C19 /* SceneDelegate.swift */,
-				685636B925D1445400025C19 /* ViewController.swift */,
-				685636BB25D1445500025C19 /* Main.storyboard */,
-				685636BE25D1445800025C19 /* Assets.xcassets */,
-				685636C025D1445800025C19 /* LaunchScreen.storyboard */,
-				685636C325D1445800025C19 /* Info.plist */,
+				685636F225D14A9800025C19 /* Controllers */,
+				685636F125D14A8800025C19 /* Models */,
+				685636CA25D1449100025C19 /* Application */,
+				685636CC25D1451300025C19 /* Views */,
+				685636CB25D144A500025C19 /* Resources */,
+				685636D125D145F700025C19 /* Database */,
+				685636D025D145EC00025C19 /* Network */,
+				685636CF25D145BC00025C19 /* Interactors */,
 			);
 			path = "MVVM Template";
+			sourceTree = "<group>";
+		};
+		685636CA25D1449100025C19 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				685636B525D1445400025C19 /* AppDelegate.swift */,
+				685636B725D1445400025C19 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		685636CB25D144A500025C19 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				685636BE25D1445800025C19 /* Assets.xcassets */,
+				685636C325D1445800025C19 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		685636CC25D1451300025C19 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				685636CE25D1454C00025C19 /* XIBs */,
+				685636CD25D1452000025C19 /* Storyboards */,
+				685636D225D1469500025C19 /* Custom Views */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		685636CD25D1452000025C19 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				685636BB25D1445500025C19 /* Main.storyboard */,
+				685636C025D1445800025C19 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		685636CE25D1454C00025C19 /* XIBs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = XIBs;
+			sourceTree = "<group>";
+		};
+		685636CF25D145BC00025C19 /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		685636D025D145EC00025C19 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		685636D125D145F700025C19 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		685636D225D1469500025C19 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		685636F125D14A8800025C19 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		685636F225D14A9800025C19 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				685636FC25D14D0D00025C19 /* Base */,
+				685636FB25D14BD300025C19 /* Home */,
+				685636F325D14AAD00025C19 /* Authentication */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		685636F325D14AAD00025C19 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				685636F825D14B9D00025C19 /* Login */,
+				685636F925D14BAA00025C19 /* Registration */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		685636F825D14B9D00025C19 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		685636F925D14BAA00025C19 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
+		685636FB25D14BD300025C19 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		685636FC25D14D0D00025C19 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				685636B925D1445400025C19 /* BaseViewController.swift */,
+				685636FD25D14D4F00025C19 /* BaseViewModel.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +268,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				685636BA25D1445400025C19 /* ViewController.swift in Sources */,
+				685636BA25D1445400025C19 /* BaseViewController.swift in Sources */,
+				685636FE25D14D4F00025C19 /* BaseViewModel.swift in Sources */,
 				685636B625D1445400025C19 /* AppDelegate.swift in Sources */,
 				685636B825D1445400025C19 /* SceneDelegate.swift in Sources */,
 			);
@@ -287,7 +419,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "MVVM Template/Info.plist";
+				INFOPLIST_FILE = "MVVM Template/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,7 +437,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "MVVM Template/Info.plist";
+				INFOPLIST_FILE = "MVVM Template/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
